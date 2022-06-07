@@ -1,0 +1,51 @@
+<template>
+    <v-card class="pa-4"
+    max-width="264">
+        <v-img height="128px" :src="image" class="image-positioning">
+            <span class="event-type blue" v-text="type">
+            </span>
+        </v-img>
+        <v-card-text>
+            <v-row align="center" class="primary-purple font-weight-bold">
+                <div class="" v-text="date"></div>
+                <div class="mx-2">/</div>
+                <div class="" v-text="time"></div>
+            </v-row>
+        </v-card-text>
+        <p class="pa-0 font-weight-black h4 secondary-black" v-text="title"></p>
+        <v-card-text class="my-4 pl-0" v-text="location"></v-card-text>
+    </v-card>
+</template>
+<script>
+export default{
+    name: 'EventCard',
+    props: {
+        type: String,
+        image: String,
+        date: String,
+        time: String,
+        title: String,
+        location: String
+    }
+}
+</script>
+<style>
+.primary-purple{
+    color: #4A0A52;
+}
+.secondary-black {
+    color: #16061C;
+}
+.image-positioning{
+    position: relative;
+}
+.event-type{
+    padding: 1px 3px;
+    border-radius: 4px;
+    color: white;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: 14px;
+}
+</style>

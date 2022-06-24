@@ -1,19 +1,21 @@
 <template>
-    <v-card class="pa-4"
-    max-width="264">
+    <v-card max-height="350">
         <v-img height="128px" :src="image" class="image-positioning">
-            <span class="event-type blue" v-text="type">
-            </span>
+            <span class="event-type blue" v-if="type == 'Zoom'" v-text="type"></span>
+            <span class="event-type red" v-else-if="type == 'Youtube'" v-text="type"></span>
+            <span class="event-type primary-purple-bg" v-else v-text="type"></span>
         </v-img>
-        <v-card-text>
-            <v-row align="center" class="primary-purple font-weight-bold">
-                <div class="" v-text="date"></div>
-                <div class="mx-2">/</div>
-                <div class="" v-text="time"></div>
-            </v-row>
-        </v-card-text>
-        <p class="pa-0 font-weight-black h4 secondary-black" v-text="title"></p>
-        <v-card-text class="my-4 pl-0" v-text="location"></v-card-text>
+        <div class="pa-4">
+            <v-card-text>
+                <v-row align="center" class="primary-purple font-weight-bold pl-0">
+                    <div class="" v-text="date"></div>
+                    <div class="mx-2">/</div>
+                    <div class="" v-text="time"></div>
+                </v-row>
+            </v-card-text>
+            <p class="font-weight-black h4 secondary-black" v-text="title"></p>
+            <v-card-text class="pl-0 py-0" v-text="location"></v-card-text>
+        </div>
     </v-card>
 </template>
 <script>
@@ -32,6 +34,9 @@ export default{
 <style>
 .primary-purple{
     color: #4A0A52;
+}
+.primary-purple-bg {
+    background: #4A0A52;
 }
 .secondary-black {
     color: #16061C;

@@ -6,15 +6,18 @@
             <span class="event-type primary-purple-bg" v-else v-text="type"></span>
         </v-img>
         <div class="pa-4">
-            <v-card-text>
+            <v-card-text class="pl-3">
                 <v-row align="center" class="primary-purple font-weight-bold pl-0">
                     <div class="" v-text="date"></div>
                     <div class="mx-2">/</div>
                     <div class="" v-text="time"></div>
                 </v-row>
             </v-card-text>
-            <p class="font-weight-black h4 secondary-black" v-text="title"></p>
-            <v-card-text class="pl-0 py-0" v-text="location"></v-card-text>
+            <div height="38px" class="overflow-hidden">
+                <p class="secondary-black"
+                v-text="title"></p>
+            </div>
+            <v-card-text class="pl-0 py-0 grey-text-location" v-text="location"></v-card-text>
         </div>
     </v-card>
 </template>
@@ -40,6 +43,9 @@ export default{
 }
 .secondary-black {
     color: #16061C;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
 }
 .image-positioning{
     position: relative;
@@ -52,5 +58,11 @@ export default{
     top: 3px;
     right: 3px;
     font-size: 14px;
+}
+.grey-text-location{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #727272;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <v-card max-height="350">
+    <v-card max-height="350" class="fill-height">
         <v-img height="128px" :src="image" class="image-positioning">
             <span class="event-type blue" v-if="type == 'Zoom'" v-text="type"></span>
             <span class="event-type red" v-else-if="type == 'Youtube'" v-text="type"></span>
@@ -13,8 +13,8 @@
                     <div class="" v-text="time"></div>
                 </v-row>
             </v-card-text>
-            <div height="38px" class="overflow-hidden">
-                <p class="secondary-black"
+            <div>
+                <p class="secondary-black title-limited"
                 v-text="title"></p>
             </div>
             <v-card-text class="pl-0 py-0 grey-text-location" v-text="location"></v-card-text>
@@ -64,5 +64,11 @@ export default{
     font-size: 12px;
     line-height: 16px;
     color: #727272;
+}
+.title-limited{
+    line-height: 19px;
+    max-height: 38px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
 }
 </style>

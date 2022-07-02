@@ -15,7 +15,7 @@
             <button class="font-weight-bold primary-purple text-decoration-underline">Смотреть все</button>
           </div>
         </v-row>
-        <v-row class="d-flex flex-wrap align-start justify-center justify-md-start align-content-stretch">
+        <v-row class="d-flex flex-wrap justify-center justify-sm-start">
           <template v-for="{type, image, date, time, title, location} in events">
             <v-col :key="title" :cols="events.length" :sm="parseInt(events.length/2)" lg="3">
               <EventCard :type='type' :image="image" :title="title" :date="date" :time="time" :location="location" />
@@ -46,7 +46,7 @@ export default {
       { type: 'Zoom', image: 'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg', date: 'Чт Дек 4', time: '18:00', title: 'Consectetur adipiscing elit lipsum', location: 'St.Petersburg, Russia ', organisation: 'Алексей Кончаловский', organisationPhoto: '', rating: 0, participants: []},
       { type: 'Zoom', image: 'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg', date: 'Чт Дек 4', time: '18:00', title: 'Consectetur adipiscing elit lipsum', location: 'St.Petersburg, Russia ', organisation: 'Алексей Кончаловский', organisationPhoto: '', rating: 0, participants: []},
       { type: 'Zoom', image: 'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg', date: 'Чт Дек 4', time: '18:00', title: 'Consectetur adipiscing elit lipsum', location: 'St.Petersburg, Russia ', organisation: 'Алексей Кончаловский', organisationPhoto: '', rating: 0, participants: []},
-      { type: 'Zoom', image: 'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg', date: 'Чт Дек 4', time: '18:00', title: 'Consectetur adipiscing elit lipsum', location: 'St.Petersburg, Russia ', organisation: 'Алексей Кончаловский', organisationPhoto: '', rating: 0, participants: []},
+      // { type: 'Zoom', image: 'https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg', date: 'Чт Дек 4', time: '18:00', title: 'Consectetur adipiscing elit lipsum', location: 'St.Petersburg, Russia ', organisation: 'Алексей Кончаловский', organisationPhoto: '', rating: 0, participants: []},
  
     ]
   }),

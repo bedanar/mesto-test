@@ -3,15 +3,15 @@
     <v-main>
       <v-container>
         <v-row class="align-center">
-          <div class="py-4 d-flex flex-wrap align-center col-12 col-md-10">
+          <div class="py-4 d-flex flex-wrap align-center col-12 col-sm-10">
             <h2 class="heading__main primary-purple">Ближайшие события</h2>
             <div class="d-flex align-center">
               <span class="pl-0 pl-sm-4 pr-4 grey-text d-flex">Найдено: <span class="primary-purple font-weight-bold">{{events.length}}</span></span>
               <span class="grey-text d-flex">Сегодня: <span class="primary-purple font-weight-bold">{{events.length}}</span></span>
-              <button class="font-weight-bold primary-purple text-decoration-underline pl-16 d-md-none">Смотреть все</button>
+              <button class="font-weight-bold primary-purple text-decoration-underline pl-16 d-flex d-sm-none">Смотреть все</button>
             </div>
           </div>
-          <div class="d-none d-md-flex col-12 col-md-2">
+          <div class="d-none d-sm-flex col-12 col-sm-2">
             <button class="font-weight-bold primary-purple text-decoration-underline">Смотреть все</button>
           </div>
         </v-row>

@@ -3,8 +3,24 @@ $font-family: "Manrope";
 
 .v-application {
   [class*="text-"] {
-    color: #36405a;
+    color: #4A0A52;
     font-family: $font-family, sans-serif !important;
   }
   font-family: $font-family, sans-serif !important;
+  $rounded: (
+  'sm': 4px,
+  'lg': 9999px
+  );
+  $purple: (
+    'purple' : '#4A0A52'
+  );
+  $purple--text: (
+    'purple--text' : '#4A0A52'
+  );
+  $black: (
+    'black' : '#16061C'
+  );
+  $grey: (
+    'grey': '#727272'
+  )
 }

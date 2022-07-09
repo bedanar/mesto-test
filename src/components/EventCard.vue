@@ -1,9 +1,11 @@
 <template>
-    <v-card max-height="350" class="fill-height">
+    <v-card max-height="350" 
+    height="256" width="256"
+    class="fill-height">
         <v-img height="128px" :src="image" class="image-positioning">
-            <span class="event-type blue" v-if="type == 'Zoom'" v-text="type"></span>
-            <span class="event-type red" v-else-if="type == 'Youtube'" v-text="type"></span>
-            <span class="event-type primary-purple-bg" v-else v-text="type"></span>
+            <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 blue" v-if="type == 'Zoom'" v-text="type"></v-chip>
+            <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 red" v-else-if="type == 'Youtube'" v-text="type"></v-chip>
+            <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 primary" v-else v-text="type"></v-chip>
         </v-img>
         <div class="pa-4">
             <v-card-text class="pl-3">
@@ -14,10 +16,10 @@
                 </v-row>
             </v-card-text>
             <div>
-                <p class="secondary-black title-limited"
+                <p class="secondary-black subtitle-2 overflow-hidden font-weight-bold title-limited"
                 v-text="title"></p>
             </div>
-            <v-card-text class="pl-0 py-0 grey-text-location" v-text="location"></v-card-text>
+            <v-card-text class="pl-0 py-0 grey--text font-weight-medium caption" v-text="location"></v-card-text>
         </div>
     </v-card>
 </template>
@@ -43,32 +45,17 @@ export default{
 }
 .secondary-black {
     color: #16061C;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
 }
 .image-positioning{
     position: relative;
 }
 .event-type{
-    padding: 1px 3px;
-    border-radius: 4px;
-    color: white;
     position: absolute;
     top: 3px;
     right: 3px;
-    font-size: 14px;
-}
-.grey-text-location{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    color: #727272;
 }
 .title-limited{
-    line-height: 19px;
     max-height: 38px;
-    overflow: hidden;
     -webkit-line-clamp: 2;
 }
 </style>

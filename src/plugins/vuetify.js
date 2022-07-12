@@ -10,6 +10,8 @@ export default new Vuetify({
             primary: '#4A0A52', // #E53935
             secondary: '#16061C', // #FFCDD2
             // accent: colors.indigo.base, // #3F51B5
+            accent: "#F1F1F1",
+            background: '#f1f1f1'
           },
         },
     },

@@ -1,7 +1,7 @@
 <template>
-    <v-card max-height="350" 
-    height="256" width="256"
-    class="fill-height">
+    <v-card max-height="350"
+    elevation="1"
+    class="fill-height white">
         <v-img height="128px" :src="image" class="image-positioning">
             <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 blue" v-if="type == 'Zoom'" v-text="type"></v-chip>
             <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 red" v-else-if="type == 'Youtube'" v-text="type"></v-chip>
@@ -9,7 +9,7 @@
         </v-img>
         <div class="pa-4">
             <v-card-text class="pl-3">
-                <v-row align="center" class="primary-purple font-weight-bold pl-0">
+                <v-row align="center" class="primary--text font-weight-bold pl-0">
                     <div class="" v-text="date"></div>
                     <div class="mx-2">/</div>
                     <div class="" v-text="time"></div>

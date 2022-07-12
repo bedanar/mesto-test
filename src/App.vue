@@ -1,18 +1,18 @@
-<template>
-  <v-app class="app-bg">
+<template class="app-bg">
+  <v-app>
     <v-main>
       <v-container>
         <v-row class="align-center">
           <div class="py-4 d-flex flex-wrap align-center col-12 col-sm-10">
-            <h2 class="title font-weight-bold primary-purple">Ближайшие события</h2>
+            <h2 class="title font-weight-bold primary--text">Ближайшие события</h2>
             <div class="d-flex align-center">
               <span class="pl-0 pl-sm-4 pr-4 font-weight-medium caption grey--text d-flex">Найдено: <span class="primary-purple font-weight-bold">{{events.length}}</span></span>
-              <span class="grey--text font-weight-medium caption d-flex">Сегодня: <span class="primary-purple font-weight-bold">{{events.length}}</span></span>
-              <button class="font-weight-bold text-decoration-underline pl-16 d-flex d-sm-none">Смотреть все</button>
+              <span class="grey--text font-weight-medium caption d-flex">Сегодня: <span class="primary--text font-weight-bold">{{events.length}}</span></span>
+              <button class="font-weight-bold text-decoration-underline primary--text pl-16 d-flex d-sm-none">Смотреть все</button>
             </div>
           </div>
           <div class="d-none d-sm-flex col-12 col-sm-2">
-            <button class="font-weight-bold text-decoration-underline">Смотреть все</button>
+            <button class="font-weight-bold primary--text text-decoration-underline">Смотреть все</button>
           </div>
         </v-row>
         <v-row class="d-flex flex-wrap justify-center justify-sm-start">

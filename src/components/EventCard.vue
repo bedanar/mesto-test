@@ -2,7 +2,7 @@
     <v-card max-height="350"
     elevation="1"
     class="fill-height white">
-        <v-img height="128px" :src="image" class="image-positioning">
+        <v-img aspect-ratio="2.3125" :src="image" class="image-positioning">
             <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 blue" v-if="type == 'Zoom'" v-text="type"></v-chip>
             <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 red" v-else-if="type == 'Youtube'" v-text="type"></v-chip>
             <v-chip class="event-type py-1 px-2 rounded-sm white--text subtitle-2 primary" v-else v-text="type"></v-chip>
